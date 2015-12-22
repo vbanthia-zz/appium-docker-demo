@@ -1,0 +1,13 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker build -t appium-test .
+
+test:
+  override:
+    - docker run --name appium-test -e "DEVICE_SERIAL=356587051720908" -e "FEATURE_TYPE=addition" appium-test
+
+
