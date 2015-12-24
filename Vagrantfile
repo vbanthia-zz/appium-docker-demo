@@ -31,12 +31,6 @@ Vagrant.configure(2) do |config|
   end
 
   # Provisioning
-  config.vm.provision :shell do |sh|
-    sh.inline = <<-EOF
-      export DEBIAN_FRONTEND=noninteractive;
-      # Install docker
-      apt-get update --assume-yes
-      apt-get install docker
-    EOF
-  end
+  # Install docker
+  config.vm.provision "docker"
 end

@@ -278,4 +278,4 @@ You can do lots of amazing things by using this approach. I could not explain al
 - Creating pipelines, between your server release, mobile app release and appium tests using Jenkins
 - Instead of attaching real devices to your machines, use tools such as [openstf](https://github.com/openstf/stf) and its [APIs](https://github.com/openstf/stf/blob/2.0.0/doc/API.md) which will solve your problems to manage real devices.
 
-**PS: There are many things in this blog which I could not explain thoroughly because of time and length of this tutorial. Feel free to ask anything and it is open to all for contribution**
+**PS: There are many things in this tutorial which I could not explain thoroughly because of time and length of this tutorial. Feel free to ask anything and it is open to all for contribution**

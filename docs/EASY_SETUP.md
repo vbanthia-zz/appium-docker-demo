@@ -49,21 +49,15 @@ In order to access real devices from VMs, it is necessary to create usb filters.
 #### Start VM
 
 ```bash
+# This will also install docker
 vagrant up
 vagrant ssh
-```
-
-#### Install docker
-
-```bash
-sudo apt-get update
-sudo apt-get install docker
 ```
 
 ## Run appium tests
 
 ```bash
-docker run -d --privileged -v /dev/bus/usb:/dev/bus/usb -e "DEVICE_SERIAL=xxxx" -e "FEATURE=addition" --name device1-addition vbanthia/appium-docker-test:latest
+docker run --privileged -v /dev/bus/usb:/dev/bus/usb -e "DEVICE_SERIAL=xxxx" -e "FEATURE=addition" --name device1-addition vbanthia/appium-docker-test:latest
 ```
 
-You need to add your device serial in `DEVICE_SERAIL` env variable. It will take few minutes to download docker image for the first time.
+You need to add your device serial in `DEVICE_SERIAL` env variable. It will take few minutes to download docker image for the first time.

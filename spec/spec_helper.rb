@@ -18,7 +18,6 @@ RSpec.configure do |config|
       platformName: :android,
       deviceName: '',
       newCommandTimeout: '9999',
-      androidPackage: 'jp.peroli.mery',
       app: app_path,
       udid: device_serial
     }
