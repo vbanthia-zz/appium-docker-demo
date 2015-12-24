@@ -6,38 +6,19 @@ if [ "$DEVICE_SERIAL" == "" ]; then
   exit
 fi
 
-connectUrl=$(node ./scripts/stf_connect.js $DEVICE_SERIAL)
-
-if [ "$connectUrl" == "" ]; then
-  echo "Cannot connect to device"
-  exit
-else
-  adb connect $connectUrl
-fi
-
-function disconnetDevice {
-  if [ "$DEVICE_SERIAL" != "" ]; then
-    echo "Releasing device"
-    node ./scripts/stf_disconnect.js $DEVICE_SERIAL
-  fi
-}
-
-# Always disconnect devic before exit
-trap disconnetDevice EXIT
-
 # Run appium server
+echo "Starting appium server"
 (appium &) > /dev/null 2>&1
 sleep 10
 
-export UDID=$connectUrl
 
 # Run tests
-if [ "$FEATURE_TYPE" == "" ]; then
+if [ "$FEATURE" == "" ]; then
  echo "Running all tests"
  bundle exec rake spec
 else
- echo "Running $FEATURE_TYPE tests"
- bundle exec rake spec:$FEATURE_TYPE
+ echo "Running $FEATURE tests"
+ bundle exec rake spec:$FEATURE
 fi
 
-disconnetDevice
+echo "Test finished!"

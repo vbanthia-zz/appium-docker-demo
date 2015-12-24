@@ -45,3 +45,6 @@ android/.gradle
 android/local.properties
 android/build/
 android/captures
+
+# Vagrant
+.vagrant

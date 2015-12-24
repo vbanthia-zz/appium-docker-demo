@@ -59,6 +59,3 @@ DEPENDENCIES
   pry
   rake
   rspec
-
-BUNDLED WITH
-   1.11.0

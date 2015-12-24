@@ -4,7 +4,7 @@ RSpec.describe 'Calculator' do
   let!(:x) { 7 }
   let!(:y) { 3 }
 
-  context 'addition' do
+  context 'multiplication' do
     before do
       $driver.find_element(:accessibility_id, 'resetButton').click
 
