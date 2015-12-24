@@ -8,10 +8,8 @@ WORKDIR /usr/src
 
 COPY Gemfile /usr/src/
 COPY Gemfile.lock /usr/src/
-COPY package.json /usr/src/
 
-RUN bundle install \
-  && npm install
+RUN bundle install
 
 COPY . /usr/src
 
