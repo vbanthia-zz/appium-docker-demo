@@ -9,7 +9,7 @@ fi
 # Run appium server
 echo "Starting appium server"
 (appium &) > /dev/null 2>&1
-sleep 10
+sleep 15
 
 
 # Run tests
