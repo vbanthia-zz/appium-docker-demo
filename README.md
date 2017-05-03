@@ -267,6 +267,9 @@ docker rm device1-addition
 docker rm device2-addition
 ```
 
+## Running tests in Parallel
+Check [this](https://github.com/vbanthia/appium-docker-demo/issues/5) and [this](https://github.com/vbanthia/appium-docker-demo/issues/6)
+
 # Summary
 As you can see how powerful can it be if you dockerize your appium test. It will be so easy to scale them. Test will be more robust and you can trust your test environment.
 
